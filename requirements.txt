@@ -1,0 +1,9 @@
+# No external dependencies required for core functionality
+# Standard library only: json, random, time, datetime, os
+
+# Optional - for future hardware integration
+# pyserial>=3.5       # for serial communication with sensors
+# bleak>=0.21.0       # for Bluetooth Low Energy (BLE) sensor communication
+
+# Optional - for notifications
+# twilio>=8.0.0       # for SMS alerts to parents
