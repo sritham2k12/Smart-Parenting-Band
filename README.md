@@ -16,11 +16,13 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
 [![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
+[![Patent](https://img.shields.io/badge/Patent-202441053190-FF6B00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAxTDMgNXYxMWM0LjMgNi4yIDkgOS40IDkgOS40czQuNy0zLjIgOS05LjRWNWwtOS00eiIvPjwvc3ZnPg==&logoColor=white)](https://ipindia.gov.in)
 
 <br/>
 
-> 🏆 **Portfolio-Level MVP** · Built for internships, hackathons & startup pitches
-> 🌐 **Landing Page** → [View Website](https://github.com/sritham2k12/Smart-Parenting-Band)
+> 🏆 **Portfolio-Level MVP** · Built for internships, hackathons & startup pitches  
+> 🌐 **Landing Page** → [View Website](https://github.com/sritham2k12/Smart-Parenting-Band)  
+> 🔒 **Patent Filed** · Application No. 202441053190 · Govt. of India
 
 </div>
 
@@ -276,6 +278,42 @@ smart-parenting-monitor/
 
 ---
 
+## 🔒 Patent
+
+<div align="center">
+
+| | |
+|---|---|
+| **Application Number** | 202441053190 |
+| **Title** | A Smart Wearable Integrating AI and IoT Based Parent Banding System for Enhanced Parental Support |
+| **Application Type** | Ordinary Application |
+| **Date of Filing** | 11 July 2024 |
+| **Publication Date** | 19 July 2024 (U/S 11A) |
+| **Field of Invention** | Electronics |
+| **Authority** | Office of the Controller General of Patents, Designs & Trade Marks |
+| **Ministry** | Department for Promotion of Industry and Internal Trade, Govt. of India |
+
+</div>
+
+### Inventors / Applicants
+
+| # | Name |
+|---|---|
+| 1 | Mrs. R. Vidya |
+| 2 | Poonam Mane |
+| 3 | Dr. P. Deepan |
+| 4 | **Manisritham Narsingoju** |
+| 5 | Mr. N. Arul |
+| 6 | Ms. M. Arsha Reddy |
+| 7 | Mr. Veerabhadraya |
+| 8 | Mr. D. Senthil |
+| 9 | Mr. J. Ravi Chandran |
+
+> ⚠️ **All intellectual property rights belong exclusively to the applicants listed above.**  
+> This repository is a software implementation of the patented concept. Unauthorized commercial use is prohibited.
+
+---
+
 ## 📄 License
 
 MIT License — free to use, modify, and distribute.
@@ -288,6 +326,6 @@ MIT License — free to use, modify, and distribute.
 
 *If this helped you — please give it a ⭐ star!*
 
-[![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/smart-parenting-monitor?style=social)](https://github.com/YOUR_USERNAME/smart-parenting-monitor)
+[![GitHub stars](https://www.linkedin.com/posts/manisritham_innovation-parenting-technology-share-7220704344147419136-AKNe)](https://github.com/sritham2k12/Smart-Parenting-Band)
 
 </div>
