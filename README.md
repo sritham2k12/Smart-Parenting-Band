@@ -20,7 +20,7 @@
 <br/>
 
 > 🏆 **Portfolio-Level MVP** · Built for internships, hackathons & startup pitches
-> 🌐 **Landing Page** → [View Website](https://YOUR_USERNAME.github.io/smart-parenting-monitor)
+> 🌐 **Landing Page** → [View Website](https://github.com/sritham2k12/Smart-Parenting-Band)
 
 </div>
 
@@ -128,7 +128,7 @@ The system:
 
 ### 1 — Clone
 ```bash
-git clone https://github.com/sritham2k12/smart-parenting-monitor.git
+git clone https://github.com/sritham2k12/Smart-Parenting-Band
 cd smart-parenting-monitor
 ```
 
