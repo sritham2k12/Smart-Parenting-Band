@@ -1,262 +1,293 @@
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Smart+Parenting+Band+%F0%9F%91%B6;AI+%2B+IoT+Health+Monitor;Emotion+Detection+System" alt="Typing SVG" />
+
+<br/>
+
 # 👶 Smart Parenting Health & Emotion Monitoring System
 
-> AI + IoT Simulation + LLM Assistant — Portfolio-Level MVP
+### *AI-Powered Child Health Monitor with IoT Simulation, Emotion Detection & LLM Parenting Assistant*
+
+<br/>
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
+[![Plotly](https://img.shields.io/badge/Plotly-5.18+-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
+
+<br/>
+
+> 🏆 **Portfolio-Level MVP** · Built for internships, hackathons & startup pitches
+> 🌐 **Landing Page** → [View Website](https://YOUR_USERNAME.github.io/smart-parenting-monitor)
+
+</div>
 
 ---
 
-## 🎯 Product Overview
+## 🎯 What Is This?
 
-A real-world startup-grade system that monitors a child's health biometrics in real-time,
-detects emotional states using Machine Learning, and generates actionable parenting advice
-via an LLM insight engine — all presented in a modern dark-mode dashboard.
+A **real-world startup-grade system** that monitors a child's health biometrics in real-time — simulating what an actual IoT wearable band (like a smartwatch for kids) would send to parents.
 
-### Target Users
-- Parents of children aged 2–10
-- Working professionals who want peace of mind
-- Pediatric telehealth platforms (B2B SaaS expansion)
+The system:
+- 📡 **Simulates IoT sensor data** — heart rate, temperature, SpO2, activity, HRV
+- 🧠 **Detects emotions** using a trained Random Forest ML model (99.9% accuracy)
+- 🔔 **Alerts parents** about abnormal health readings instantly
+- 💬 **Generates parenting advice** using an LLM (OpenAI or built-in smart engine)
+- 📊 **Visualizes everything** in a modern dark-mode real-time dashboard
 
-### Problems Solved
-| Problem | Solution |
-|---|---|
-| Parents can't monitor child health continuously | 24/7 IoT biometric simulation → real dashboard |
-| Emotional distress is hard to detect early | ML-powered emotion prediction from vitals |
-| Raw health data is hard to interpret | LLM converts numbers → natural language advice |
-| No early warning system for health emergencies | Multi-tier alert system with thresholds |
+---
 
-### Unique Selling Points
-- 🧠 AI-based emotion detection (not just vitals tracking)
-- 💬 LLM parenting assistant (OpenAI or offline simulation)
-- 📡 Real-time IoT-style data pipeline
-- 🔔 Intelligent anomaly detection + alerting
-- 📊 Production-grade interactive dashboard
+## 🖥️ Dashboard Preview
+
+```
+┌────────────────────────────────────────────────────────┐
+│  👶 Smart Parenting Health Monitor         ● LIVE      │
+├──────────────┬─────────────┬──────────────┬────────────┤
+│ ❤️ Heart Rate │ 🌡️ Temp     │ 🫁 SpO2      │ ⚡ Activity │
+│   95 bpm     │  36.8°C     │   98%        │   65/100   │
+├──────────────┴─────────────┴──────────────┴────────────┤
+│  😌 Current Emotion: calm  (confidence 87%)            │
+├────────────────────────────────────────────────────────┤
+│  [4-Panel Vitals Chart]     [Emotion Timeline]         │
+│  [Emotion Donut Chart]      [Feature Importance]       │
+├────────────────────────────────────────────────────────┤
+│  💡 AI Parenting Insights                              │
+│  "Your child is having a healthy, well-balanced day.." │
+└────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 🏗️ System Architecture
 
 ```
-Simulated IoT Sensors
-        │
-        ▼
-Data Generator (utils/data_simulator.py)
-        │  realistic time-series with noise + anomalies
-        ▼
-SQLite Database (utils/database.py)
-        │  structured schema, indexed queries
-        ▼
-Data Processing Pipeline (utils/data_processor.py)
-        │  cleaning → normalization → feature engineering
-        ▼
-Emotion AI Engine (models/emotion_engine.py)
-        │  Random Forest classifier + rule-based fallback
-        ▼
-Alert System (utils/alerts.py)
-        │  threshold checks + trend analysis
-        ▼
-LLM Insight Engine (utils/llm_engine.py)
-        │  OpenAI GPT-4o-mini OR smart template engine
-        ▼
-FastAPI Backend (api/main.py)          Streamlit Dashboard (dashboard/app.py)
-        │  REST endpoints                │  Dark-mode UI + Plotly charts
-        └──────────────┬─────────────────┘
-                       ▼
-              Production Dashboard
+📡 Simulated IoT Sensors  (Arduino / ESP32 concept)
+         │
+         ▼
+⚙️  Data Generator                ← data_simulator.py
+    (time-series + noise + anomalies)
+         │
+         ▼
+🗄️  SQLite Database                ← database.py
+    (3 tables, WAL mode, indexed)
+         │
+         ▼
+🔬 Data Processing Pipeline       ← data_processor.py
+    (cleaning → normalise → 12 features)
+         │
+         ▼
+🧠 Emotion AI Engine              ← emotion_engine.py
+    (Random Forest + rule-based fallback)
+         │               │
+         ▼               ▼
+🔔 Alert System       💬 LLM Insight Engine
+   alerts.py             llm_engine.py
+         │               │
+         └──────┬─────────┘
+                ▼
+   ┌────────────────────────────┐
+   │ 📊 Streamlit Dashboard     │  ← dashboard/app.py
+   │ ⚙️  FastAPI Backend         │  ← api/main.py
+   └────────────────────────────┘
 ```
 
 ---
 
-## 📁 Project Structure
+## ✨ Key Features
 
-```
-smart_parenting/
-├── main.py                      # One-click setup & bootstrap
-├── requirements.txt
-├── README.md
-│
-├── data/
-│   └── health_monitor.db        # Auto-created SQLite database
-│
-├── models/
-│   ├── emotion_engine.py        # ML training + inference
-│   ├── emotion_model.pkl        # Trained Random Forest (auto-generated)
-│   ├── scaler.pkl               # Feature scaler
-│   └── label_encoder.pkl        # Emotion label encoder
-│
-├── api/
-│   └── main.py                  # FastAPI REST backend
-│
-├── dashboard/
-│   └── app.py                   # Streamlit dashboard UI
-│
-└── utils/
-    ├── data_simulator.py        # IoT sensor simulation engine
-    ├── database.py              # SQLite ORM layer
-    ├── data_processor.py        # Feature engineering pipeline
-    ├── alerts.py                # Anomaly detection + alerting
-    └── llm_engine.py            # LLM insight generation
-```
+| Feature | Details |
+|---|---|
+| 📡 **IoT Simulation** | Diurnal patterns (sleep/active/excited/fatigue) + 5% anomaly injection |
+| 🧠 **Emotion AI** | Random Forest · 12 engineered features · 99.9% CV accuracy · 5 states |
+| 💬 **LLM Insights** | OpenAI GPT-4o-mini · offline smart fallback · prompt-engineered |
+| 🔔 **Alert System** | 3-tier alerts (Normal / Caution / Warning) + sustained trend detection |
+| 📊 **Dashboard** | Dark-mode Streamlit · 4-panel Plotly vitals · emotion timeline · heatmap |
+| ⚙️ **REST API** | FastAPI · 10 endpoints · Swagger docs · CORS · Pydantic validation |
+| 💾 **Database** | SQLite · 3 tables · WAL mode · indexed time-series queries |
+| 📤 **Export** | One-click CSV download from dashboard sidebar |
 
 ---
 
-## ⚡ Installation & Setup
+## 🧠 Emotion Detection — 5 States
 
-### 1. Clone / create project directory
+| Emotion | Physiological Indicators |
+|---|---|
+| 😌 **Calm** | Normal HR (80–100 bpm), stable HRV, low stress index |
+| 🤩 **Excited** | HR > 115 bpm, activity > 70, high energy |
+| 😰 **Stressed** | HR > 110 bpm, low HRV (< 25 ms), elevated temperature |
+| 😫 **Fatigue** | Low activity (< 20), low HR, afternoon hours |
+| 😴 **Sleep** | HR < 75 bpm, activity < 10, night hours (10 PM–6 AM) |
+
+**12 ML features:** `heart_rate` · `temperature` · `activity` · `spo2` · `hrv` · `hr_variability_10m` · `temp_rolling_mean` · `activity_trend` · `stress_index` · `fatigue_score` · `hour_sin` · `hour_cos`
+
+---
+
+## 🚀 Quick Start
+
+### 1 — Clone
 ```bash
-mkdir smart_parenting && cd smart_parenting
-# Copy all project files here
+git clone https://github.com/YOUR_USERNAME/smart-parenting-monitor.git
+cd smart-parenting-monitor
 ```
 
-### 2. Create virtual environment
+### 2 — Virtual environment
 ```bash
 python -m venv venv
 
-# Activate:
-# Windows:  venv\Scripts\activate
-# Mac/Linux: source venv/bin/activate
+# Windows
+venv\Scripts\activate
+
+# Mac / Linux
+source venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 3 — Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. (Optional) Set OpenAI API key
+### 4 — (Optional) OpenAI key
 ```bash
-# Create .env file:
-echo "OPENAI_API_KEY=sk-your-key-here" > .env
+# Windows
+set OPENAI_API_KEY=sk-your-key
 
-# Or export directly:
-export OPENAI_API_KEY=sk-your-key-here
+# Mac / Linux
+export OPENAI_API_KEY=sk-your-key
 ```
+> Works fully without a key — built-in offline engine used automatically
 
-### 5. Bootstrap the system
+### 5 — Bootstrap (run once)
 ```bash
 python main.py
 ```
-This will:
-- Initialize the SQLite database
-- Generate 14 days of simulation data
-- Train the Random Forest emotion model
-- Print feature importance scores
 
----
+Expected output:
+```
+[1/4] Initializing database...          ✓
+[2/4] Generating simulation data...     4,033 records
+[3/4] Seeding database...               ✓
+[4/4] Training Emotion AI model...
+      CV F1 (5-fold): 0.999 ± 0.002    ✓
+      Model saved                       ✓
+```
 
-## 🚀 Running the System
-
-### Option A: Streamlit Dashboard Only (Recommended)
+### 6 — Launch dashboard
 ```bash
 streamlit run dashboard/app.py
 ```
-Open: http://localhost:8501
+**→ http://localhost:8501**
 
-### Option B: FastAPI Backend
+### 7 — (Optional) Launch API
 ```bash
-uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn api.main:app --reload
 ```
-Open: http://localhost:8000/docs (interactive Swagger UI)
-
-### Option C: Run Both (recommended for production)
-```bash
-# Terminal 1:
-uvicorn api.main:app --port 8000 --reload
-
-# Terminal 2:
-streamlit run dashboard/app.py
-```
+**→ http://localhost:8000/docs**
 
 ---
 
 ## 📡 API Endpoints
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | Service info |
-| GET | `/health` | Health check |
-| GET | `/live` | Generate live IoT reading + emotion + alerts |
+|---|---|---|
+| GET | `/live` | Live reading + emotion + alerts |
 | GET | `/readings?hours=24` | Historical sensor data |
-| GET | `/readings/anomalies` | Anomaly records only |
+| GET | `/readings/anomalies` | Anomalous readings only |
 | GET | `/emotions?hours=48` | Emotion prediction history |
 | GET | `/emotions/distribution` | Emotion % breakdown |
-| GET | `/stats` | Aggregate statistics |
+| GET | `/stats` | Aggregate health statistics |
 | POST | `/insights` | Generate LLM parenting insights |
 | POST | `/seed?days=7` | Seed database with simulation data |
-
----
-
-## 🧠 Emotion Classification
-
-The system detects 5 emotional states:
-
-| State | Indicators | Confidence |
-|---|---|---|
-| 😴 Sleep | Low HR (<75bpm), low activity, night hours | High |
-| 😌 Calm | Normal HR, normal activity, low stress index | High |
-| 🤩 Excited | HR >115bpm, activity >70, high HRV | High |
-| 😰 Stressed | HR >110bpm, low HRV (<25ms), elevated temp | Medium |
-| 😫 Fatigue | Low activity, low HR, afternoon hours | Medium |
-
-**Features used:** Heart Rate, Temperature, Activity, SpO2, HRV,
-HR Variability (10-min), Temp Rolling Mean, Activity Trend,
-Stress Index, Fatigue Score, Cyclical Hour Encoding
+| GET | `/health` | Service health check |
+| GET | `/docs` | Interactive Swagger UI |
 
 ---
 
 ## ⚠️ Alert Levels
 
-| Level | Trigger | Action |
+| Level | Trigger | Recommended Action |
 |---|---|---|
-| 🟢 Normal | All vitals in range | Monitor passively |
-| 🟡 Caution | HR >130 bpm OR temp >37.8°C | Check on child |
-| 🔴 Warning | HR >150 bpm OR temp >38.5°C OR SpO2 <92% | Immediate attention |
+| 🟢 Normal | All vitals in safe range | Monitor passively |
+| 🟡 Caution | HR > 130 bpm OR Temp > 37.8°C | Check on child soon |
+| 🔴 Warning | HR > 150 bpm OR Temp > 38.5°C OR SpO2 < 92% | Immediate attention |
 
 ---
 
-## 📊 Expected Output
+## 📁 Project Structure
 
-After running `python main.py`:
 ```
-[DataSimulator] Generated 4,032 records over 14 days
-[Database] Inserted 4,032 sensor readings
-[EmotionAI] CV F1 (5-fold): 0.921 ± 0.018
-[EmotionAI] Classification Report:
-              precision    recall  f1-score   support
-        calm       0.94      0.92      0.93       215
-     excited       0.91      0.94      0.92       198
-     fatigue       0.89      0.87      0.88       142
-       sleep       0.97      0.96      0.96       187
-    stressed       0.88      0.90      0.89       134
-
-── Feature Importance ──────────────────────
-  stress_index              ████████████████ 0.1842
-  fatigue_score             ██████████████   0.1623
-  hrv                       ████████████     0.1301
-  hour_sin                  ██████████       0.1102
-  activity                  █████████        0.0987
-  heart_rate                ████████         0.0876
-  hr_variability_10m        ███████          0.0754
-  hour_cos                  ██████           0.0621
+smart-parenting-monitor/
+│
+├── main.py                   ← Bootstrap: DB + seed + model train
+├── requirements.txt          ← All Python dependencies
+├── README.md                 ← This file
+├── index.html                ← Landing page (GitHub Pages)
+│
+├── utils/
+│   ├── data_simulator.py     ← IoT sensor simulation engine
+│   ├── database.py           ← SQLite schema + query layer
+│   ├── data_processor.py     ← Feature engineering pipeline
+│   ├── alerts.py             ← Multi-tier anomaly detection
+│   └── llm_engine.py         ← OpenAI + offline insight engine
+│
+├── models/
+│   └── emotion_engine.py     ← Random Forest training + inference
+│
+├── api/
+│   └── main.py               ← FastAPI REST backend
+│
+└── dashboard/
+    └── app.py                ← Streamlit dark-mode dashboard
 ```
 
 ---
 
-## 🔮 Future Roadmap
+## 🛠️ Tech Stack
 
-| Phase | Feature |
+| Layer | Technology |
 |---|---|
-| v2.0 | Real Bluetooth/BLE sensor integration |
-| v2.0 | Mobile app (React Native) |
-| v3.0 | Multi-child tracking |
-| v3.0 | Pediatrician portal |
-| v4.0 | SaaS subscription model |
-| v4.0 | Predictive health analytics (LSTM) |
+| Language | Python 3.10+ |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-learn (Random Forest) |
+| Visualization | Plotly, Matplotlib, Seaborn |
+| Backend API | FastAPI + Uvicorn |
+| Frontend UI | Streamlit |
+| Database | SQLite (WAL mode) |
+| LLM | OpenAI GPT-4o-mini / Smart Offline Engine |
 
 ---
 
-## 🧑‍💻 Tech Stack
+## 🔮 Roadmap
 
-`Python 3.11` · `Pandas` · `NumPy` · `Scikit-learn` · `FastAPI` · `Streamlit` ·
-`SQLite` · `Plotly` · `OpenAI API` · `Uvicorn`
+- [ ] 📱 Connect real Arduino / ESP32 hardware sensors
+- [ ] 📲 React Native mobile app for parents
+- [ ] 📍 GPS tracking + geo-fencing safety alerts
+- [ ] 🔊 Cry detection via audio ML model
+- [ ] 👤 Multi-child profiles
+- [ ] ☁️ Cloud deployment (AWS / GCP / Render)
+- [ ] 💰 SaaS subscription model
 
 ---
 
-*Built as a portfolio-grade MVP. Expandable into a real startup product.*
+## 💼 For Your Resume
+
+> *"Built an AI-powered child health monitoring system with real-time IoT simulation, Random Forest emotion detection (99.9% CV accuracy), LLM-generated parenting insights, and a full-stack dark-mode dashboard using Python, FastAPI, Streamlit, SQLite, and Plotly."*
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute.
+
+---
+
+<div align="center">
+
+**Built with ❤️ by N Manisritam**
+
+*If this helped you — please give it a ⭐ star!*
+
+[![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/smart-parenting-monitor?style=social)](https://github.com/YOUR_USERNAME/smart-parenting-monitor)
+
+</div>
