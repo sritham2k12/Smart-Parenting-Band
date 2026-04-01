@@ -128,7 +128,7 @@ The system:
 
 ### 1 — Clone
 ```bash
-git clone https://github.com/https://github.com/sritham2k12/smart-parenting-monitor.git
+git clone https://github.com/sritham2k12/smart-parenting-monitor.git
 cd smart-parenting-monitor
 ```
 
