@@ -272,12 +272,6 @@ smart-parenting-monitor/
 
 ---
 
-## 💼 For Your Resume
-
-> *"Built an AI-powered child health monitoring system with real-time IoT simulation, Random Forest emotion detection (99.9% CV accuracy), LLM-generated parenting insights, and a full-stack dark-mode dashboard using Python, FastAPI, Streamlit, SQLite, and Plotly."*
-
----
-
 ## 🔒 Patent
 
 <div align="center">
@@ -312,11 +306,6 @@ smart-parenting-monitor/
 > ⚠️ **All intellectual property rights belong exclusively to the applicants listed above.**  
 > This repository is a software implementation of the patented concept. Unauthorized commercial use is prohibited.
 
----
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute.
 
 ---
 
